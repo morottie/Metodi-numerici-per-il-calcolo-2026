@@ -65,7 +65,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'my_ipynb/1_basics_python';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Welcome to your Jupyter Book" href="../intro.html" />
+    <link rel="prev" title="Laboratorio di Metodi Numerici per il Calcolo" href="../intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -165,7 +165,7 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    Welcome to your Jupyter Book
+                    Laboratorio di Metodi Numerici per il Calcolo
                 </a>
             </li>
         </ul>
@@ -593,21 +593,6 @@ World!
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Anna ha 21 anni.
-&lt;class &#39;str&#39;&gt;
-
-
-100/81 = 1.2345679012345678
-	La divisione intera è: 1;
-	L&#39;operatore modulo (resto) è: 19.
-1.2987012987012987
-	 Il valore arrotondato di x è: 1.2987.
-1.2345679012345678
-	 Il valore arrotondato di x è: 1.2346.
-</pre></div>
-</div>
-</div>
 </div>
 <p>Per maggiori informazioni sull’operatore di formattazione usato nel placeholder (cioè i <code class="docutils literal notranslate"><span class="pre">:</span></code> con le specifiche) e le opzioni di formattazione delle stringhe, fare riferimento al sito: <a class="reference external" href="https://www.w3schools.com/python/python_string_formatting.asp">https://www.w3schools.com/python/python_string_formatting.asp</a>.</p>
 </section>
@@ -684,12 +669,6 @@ World!
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[10, 3.14, &#39;Python&#39;, True]
-&lt;class &#39;list&#39;&gt;
-</pre></div>
-</div>
-</div>
 </div>
 <p>Le strutture possono anche essere annidate, cioè contenere altre strutture dati:</p>
 <div class="cell docutils container">
@@ -703,13 +682,6 @@ World!
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">dati</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span> <span class="n">dati</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">dati</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;list&#39;&gt;
-[&#39;Anna&#39;, 25]
-&lt;class &#39;list&#39;&gt;
 </pre></div>
 </div>
 </div>
@@ -741,26 +713,6 @@ Gli indici negativi permettono di contare gli elementi a partire dalla fine: -1 
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20
-14
-2
-Maria
-Andrei
-10
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">169</span><span class="p">],</span> <span class="n">line</span> <span class="mi">8</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="nb">print</span><span class="p">(</span><span class="n">nomi</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nomi</span><span class="p">))</span> <span class="c1"># len restituisce il numero di elementi</span>
-<span class="ne">----&gt; </span><span class="mi">8</span> <span class="nb">print</span><span class="p">(</span><span class="n">nomi</span><span class="p">[</span><span class="mi">12</span><span class="p">])</span>
-
-<span class="ne">IndexError</span>: list index out of range
-</pre></div>
-</div>
-</div>
 </div>
 <blockquote>
 <div><p><strong>Nota:</strong>
@@ -773,12 +725,6 @@ Le liste sono <strong>modificabili</strong> (mutable): è possibile sostituire, 
 <span class="c1"># nomi[12] = &quot;Amelia&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">nomi</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nomi</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Elena&#39;, &#39;Maria&#39;, &#39;Daniel&#39;, &#39;Fatima&#39;, &#39;Lucas&#39;, &#39;Sara&#39;, &#39;Mohamed&#39;, &#39;Andrei&#39;, &#39;Blerina&#39;, &#39;Amelia&#39;]
-10
 </pre></div>
 </div>
 </div>
@@ -798,13 +744,6 @@ Le liste sono <strong>modificabili</strong> (mutable): è possibile sostituire, 
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Elena&#39;, &#39;Maria&#39;, &#39;Daniel&#39;, &#39;Fatima&#39;, &#39;Daniel&#39;, &#39;Lucas&#39;, &#39;Sara&#39;, &#39;Mohamed&#39;, &#39;Andrei&#39;, &#39;Blerina&#39;, &#39;Amelia&#39;, &#39;Amina&#39;]
-Amina
-[&#39;Elena&#39;, &#39;Maria&#39;, &#39;Fatima&#39;, &#39;Daniel&#39;, &#39;Lucas&#39;, &#39;Sara&#39;, &#39;Mohamed&#39;, &#39;Andrei&#39;, &#39;Blerina&#39;, &#39;Amelia&#39;]
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -819,15 +758,6 @@ Amina
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[10, 120, 30, -40]
-il massimo valore è: 120
-il minimo valore è: -40
-[-40, 10, 30, 120]
-[120, 30, 10, -40]
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -835,12 +765,6 @@ il minimo valore è: -40
 <span class="nb">print</span><span class="p">(</span><span class="n">nomi</span><span class="p">)</span>
 <span class="n">nomi</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">nomi</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Amelia&#39;, &#39;Andrei&#39;, &#39;Blerina&#39;, &#39;Daniel&#39;, &#39;Elena&#39;, &#39;Fatima&#39;, &#39;Lucas&#39;, &#39;Maria&#39;, &#39;Mohamed&#39;, &#39;Sara&#39;]
-[&#39;Sara&#39;, &#39;Mohamed&#39;, &#39;Maria&#39;, &#39;Lucas&#39;, &#39;Fatima&#39;, &#39;Elena&#39;, &#39;Daniel&#39;, &#39;Blerina&#39;, &#39;Andrei&#39;, &#39;Amelia&#39;]
 </pre></div>
 </div>
 </div>
@@ -861,13 +785,6 @@ il minimo valore è: -40
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[10, 2, 3]
-[10, 2, 3]
-[1, &#39;2&#39;, &#39;tre&#39;, False]
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -875,12 +792,6 @@ il minimo valore è: -40
 <span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[10, 2, 3]
-[20, 2, 3]
 </pre></div>
 </div>
 </div>
@@ -899,14 +810,6 @@ il minimo valore è: -40
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1, True, &#39;Hello&#39;)
-1
-Hello
-&lt;class &#39;tuple&#39;&gt;
-</pre></div>
-</div>
-</div>
 </div>
 <p>Attenzione: per creare una tupla con un solo elemento è necessaria la virgola</p>
 <div class="cell docutils container">
@@ -919,28 +822,12 @@ Hello
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;int&#39;&gt;
-&lt;class &#39;tuple&#39;&gt;
-</pre></div>
-</div>
-</div>
 </div>
 <p>Una tupla è <strong>immutabile</strong> (immutable): dopo la sua creazione non è possibile sostituire, aggiungere o eliminare elementi.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">4.0</span>
 <span class="c1"># TypeError: &#39;tuple&#39; object does not support item assignment</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">63</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">4.0</span>
-
-<span class="ne">TypeError</span>: &#39;tuple&#39; object does not support item assignment
 </pre></div>
 </div>
 </div>
@@ -953,13 +840,6 @@ Hello
 <span class="nb">print</span><span class="p">(</span><span class="n">nome</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">nome</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">voto</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Anna
-&lt;class &#39;str&#39;&gt;
-28
 </pre></div>
 </div>
 </div>
@@ -980,26 +860,12 @@ Un range contiene però solo numeri interi ed è utilizzato soprattutto nei cicl
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
-&lt;class &#39;range&#39;&gt;
-0
-6
-</pre></div>
-</div>
-</div>
 </div>
 <p>Un oggetto range non costruisce esplicitamente in memoria la lista completa dei valori. Per visualizzarli tutti, è possibile convertirlo in una lista</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> 
 <span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">r</span><span class="p">))</span> 
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>range(0, 7)
-[0, 1, 2, 3, 4, 5, 6]
 </pre></div>
 </div>
 </div>
@@ -1041,18 +907,6 @@ Un range contiene però solo numeri interi ed è utilizzato soprattutto nei cicl
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Sara&#39;, &#39;Mohamed&#39;, &#39;Maria&#39;, &#39;Lucas&#39;, &#39;Fatima&#39;, &#39;Elena&#39;, &#39;Daniel&#39;, &#39;Blerina&#39;, &#39;Andrei&#39;, &#39;Amelia&#39;]
-[&#39;Mohamed&#39;, &#39;Maria&#39;, &#39;Lucas&#39;, &#39;Fatima&#39;, &#39;Elena&#39;]
-[&#39;Mohamed&#39;, &#39;Lucas&#39;, &#39;Elena&#39;]
-(1, True, &#39;Hello&#39;)
-(True, &#39;Hello&#39;)
-range(0, 7)
-range(1, 6)
-[1, 2, 3, 4, 5]
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1062,16 +916,6 @@ range(1, 6)
 <span class="nb">print</span><span class="p">(</span><span class="n">nomi</span><span class="p">[</span><span class="mi">4</span><span class="p">:])</span>     <span class="c1"># fino alla fine</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">nomi</span><span class="p">[::</span><span class="mi">3</span><span class="p">])</span>    <span class="c1"># indico solo il passo</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">nomi</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Sara&#39;, &#39;Mohamed&#39;, &#39;Maria&#39;, &#39;Lucas&#39;, &#39;Fatima&#39;, &#39;Elena&#39;, &#39;Daniel&#39;, &#39;Blerina&#39;, &#39;Andrei&#39;, &#39;Amelia&#39;]
-Amelia
-[&#39;Sara&#39;, &#39;Mohamed&#39;, &#39;Maria&#39;, &#39;Lucas&#39;]
-[&#39;Fatima&#39;, &#39;Elena&#39;, &#39;Daniel&#39;, &#39;Blerina&#39;, &#39;Andrei&#39;, &#39;Amelia&#39;]
-[&#39;Sara&#39;, &#39;Lucas&#39;, &#39;Daniel&#39;, &#39;Amelia&#39;]
-[&#39;Amelia&#39;, &#39;Andrei&#39;, &#39;Blerina&#39;, &#39;Daniel&#39;, &#39;Elena&#39;, &#39;Fatima&#39;, &#39;Lucas&#39;, &#39;Maria&#39;, &#39;Mohamed&#39;, &#39;Sara&#39;]
 </pre></div>
 </div>
 </div>
@@ -1206,11 +1050,6 @@ Amelia
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x è negativo
-</pre></div>
-</div>
-</div>
 </div>
 <p>Nelle condizioni, usiamo gli operatori di confronto e/o logici</p>
 <div class="cell docutils container">
@@ -1230,19 +1069,6 @@ Amelia
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
-True
-True
-True
-False
-False
-False
-True
-True
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1259,13 +1085,6 @@ True
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ok!&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No!&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
-True
-No!
 </pre></div>
 </div>
 </div>
@@ -1293,21 +1112,6 @@ Liste, tuple, stringhe, dizionari, insiemi e oggetti range sono esempi di iterab
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Sara&#39;, &#39;Mohamed&#39;, &#39;Maria&#39;, &#39;Lucas&#39;, &#39;Fatima&#39;, &#39;Elena&#39;, &#39;Daniel&#39;, &#39;Blerina&#39;, &#39;Andrei&#39;, &#39;Amelia&#39;]
-Sara
-Mohamed
-Maria
-Lucas
-Fatima
-Elena
-Daniel
-Blerina
-Andrei
-Amelia
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1316,30 +1120,11 @@ Amelia
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>P
-y
-t
-h
-o
-n
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
-1
-2
-3
-4
 </pre></div>
 </div>
 </div>
@@ -1359,16 +1144,6 @@ n
     <span class="n">n</span> <span class="o">-=</span> <span class="mi">1</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fine!&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
-4
-3
-2
-1
-Fine!
 </pre></div>
 </div>
 </div>
@@ -1394,20 +1169,6 @@ Fine!
     <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="n">maxit</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Numero massimo di iterazioni raggiunto.&quot;</span><span class="p">)</span>
         <span class="k">break</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>i = 0, i² = 0
-i = 1, i² = 1
-i = 2, i² = 4
-i = 3, i² = 9
-i = 4, i² = 16
-i = 5, i² = 25
-i = 6, i² = 36
-i = 7, i² = 49
-i = 8, i² = 64
-Soglia superata.
 </pre></div>
 </div>
 </div>
@@ -1440,11 +1201,6 @@ Soglia superata.
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
-</pre></div>
-</div>
-</div>
 </div>
 <p>Una funzione può restituire più valori, separandoli con una virgola. In questo caso, Python raccoglie automaticamente i risultati in una  <code class="docutils literal notranslate"><span class="pre">tupla</span></code>.</p>
 <div class="cell docutils container">
@@ -1462,14 +1218,6 @@ Soglia superata.
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;tuple&#39;&gt;
-(5, 6)
-5
-6
-</pre></div>
-</div>
-</div>
 </div>
 <p>È possibile assegnare direttamente i risultati a variabili distinte mediante l’unpacking:</p>
 <div class="cell docutils container">
@@ -1477,12 +1225,6 @@ Soglia superata.
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="n">somma_e_prodotto</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="c1"># 5 </span>
 <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="c1"># 6</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
-6
 </pre></div>
 </div>
 </div>
@@ -1497,13 +1239,6 @@ Se una funzione non contiene un’istruzione <code class="docutils literal notra
 <span class="n">risultato</span> <span class="o">=</span> <span class="n">saluta</span><span class="p">(</span><span class="s2">&quot;Anna&quot;</span><span class="p">)</span> 
 <span class="nb">print</span><span class="p">(</span><span class="n">risultato</span><span class="p">)</span>            <span class="c1"># None </span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">risultato</span><span class="p">))</span>      <span class="c1"># &lt;class &#39;NoneType&#39;&gt;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Buongiorno Anna!
-None
-&lt;class &#39;NoneType&#39;&gt;
 </pre></div>
 </div>
 </div>
@@ -1534,11 +1269,6 @@ che rappresenta un passo del metodo di Newton per la ricerca degli zeri di (f).<
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.5
-</pre></div>
-</div>
-</div>
 </div>
 <p>Nella chiamata non si scrivono le parentesi dopo f e df. Infatti:</p>
 <ul class="simple">
@@ -1566,11 +1296,6 @@ che rappresenta un passo del metodo di Newton per la ricerca degli zeri di (f).<
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.20565398194814144 1.2283281067553513
-</pre></div>
-</div>
-</div>
 </div>
 <p>È possibile assegnare al modulo un nome abbreviato mediante la parola chiave <code class="docutils literal notranslate"><span class="pre">as</span></code>:</p>
 <div class="cell docutils container">
@@ -1582,11 +1307,6 @@ che rappresenta un passo del metodo di Newton per la ricerca degli zeri di (f).<
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.3897728843125886
-</pre></div>
-</div>
-</div>
 </div>
 <p>Si possono anche importare soltanto specifiche funzioni con <code class="docutils literal notranslate"><span class="pre">from</span></code> e <code class="docutils literal notranslate"><span class="pre">import</span></code>. In questo caso, le funzioni possono essere utilizzate senza anteporre il nome del modulo.</p>
 <div class="cell docutils container">
@@ -1595,12 +1315,6 @@ che rappresenta un passo del metodo di Newton per la ricerca degli zeri di (f).<
 
 <span class="nb">print</span><span class="p">(</span><span class="n">exp</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>       <span class="c1"># non math.exp</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.718281828459045
-1.4142135623730951
 </pre></div>
 </div>
 </div>
@@ -1629,13 +1343,6 @@ che rappresenta un passo del metodo di Newton per la ricerca degli zeri di (f).<
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pi = 3.141593
-e = 2.718282
-9.869604401089358
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1651,11 +1358,6 @@ e = 2.718282
 <span class="n">math</span><span class="o">.</span><span class="n">fabs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>   <span class="c1"># valore assoluto</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span> <span class="o">/</span> <span class="mi">100</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.14
 </pre></div>
 </div>
 </div>
@@ -1700,11 +1402,6 @@ e = 2.718282
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\elena\Documents\aa_lavoro_DIDATTICA\aa_slide_20262027\tutor_InfoMan\HW0 - intro py
-</pre></div>
-</div>
-</div>
 </div>
 <p>Per costruire percorsi è consigliabile utilizzare <code class="docutils literal notranslate"><span class="pre">pathlib</span></code>, che gestisce automaticamente le differenze tra sistemi operativi:</p>
 <div class="cell docutils container">
@@ -1722,24 +1419,12 @@ e = 2.718282
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\elena\Documents\aa_lavoro_DIDATTICA\aa_slide_20262027\tutor_InfoMan\HW0 - intro py
-c:\Users\elena\Documents\aa_lavoro_DIDATTICA\aa_slide_20262027\tutor_InfoMan\HW0 - intro py\dati\file.csv
-False
-</pre></div>
-</div>
-</div>
 </div>
 <p>Possiamo ottenere la lista dei nomi del file in una determinata cartella con:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">percorso_dati</span> <span class="o">=</span> <span class="n">cartella_corrente</span> <span class="o">/</span> <span class="s2">&quot;dati&quot;</span> 
 <span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">percorso_dati</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;file_a.txt&#39;, &#39;file_b.txt&#39;, &#39;file_c.txt&#39;]
 </pre></div>
 </div>
 </div>
@@ -1782,17 +1467,6 @@ Possiamo quindi misurare gli intervalli di tempo così:</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tempo di esecuzione: 2.34495000 secondi
-2.345036745071411
-Tempo medio: 0.00011725 secondi
-347875.1799472
-&lt;class &#39;float&#39;&gt;
-1789444267.7345037
-&lt;class &#39;float&#39;&gt;
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="errori-nel-codice">
@@ -1806,22 +1480,6 @@ Tempo medio: 0.00011725 secondi
 
 <span class="c1"># Errore perchè non si può dividere per zero</span>
 <span class="n">divisione</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ZeroDivisionError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">202</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Errore perchè non si può dividere per zero</span>
-<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">divisione</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-
-<span class="nn">Cell In[202], line 2,</span> in <span class="ni">divisione</span><span class="nt">(a, b)</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">def</span><span class="w"> </span><span class="nf">divisione</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-<span class="ne">----&gt; </span><span class="mi">2</span>     <span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
-
-<span class="ne">ZeroDivisionError</span>: division by zero
 </pre></div>
 </div>
 </div>
@@ -1980,16 +1638,6 @@ Stampa valore e tipo di ciascuna variabile.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2, 5, 8]
-20
-[8, 11, 14, 17]
-[2, 8, 14, 20]
-[20, 17, 14, 11, 8, 5, 2]
-None
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="esercizio-5">
@@ -2011,17 +1659,6 @@ None
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
-1
-2
-3
-4
-5
-la somma da 1 a 5 è 15 che è dispari
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="esercizio-6">
@@ -2039,11 +1676,6 @@ la somma da 1 a 5 è 15 che è dispari
 <span class="n">C</span><span class="o">=</span><span class="mi">3</span>
 <span class="n">M</span> <span class="o">=</span> <span class="n">media</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">M</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.0
 </pre></div>
 </div>
 </div>
@@ -2070,11 +1702,6 @@ Recupera i tre risultati mediante unpacking.</p></li>
 <span class="n">b</span><span class="o">=</span><span class="mi">7</span>
 <span class="n">s</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">m</span> <span class="o">=</span> <span class="n">mia_funzione</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;somma=</span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="s2">, prodotto=</span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s2">, max=</span><span class="si">{</span><span class="n">m</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>somma=9, prodotto=14, max=7
 </pre></div>
 </div>
 </div>
@@ -2154,7 +1781,7 @@ Recupera i tre risultati mediante unpacking.</p></li>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Welcome to your Jupyter Book</p>
+        <p class="prev-next-title">Laboratorio di Metodi Numerici per il Calcolo</p>
       </div>
     </a>
 </div>
