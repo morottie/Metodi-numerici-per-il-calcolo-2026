@@ -1625,61 +1625,14 @@ Stampa valore e tipo di ciascuna variabile.</p>
 <li><p>gli elementi con indice pari;</p></li>
 <li><p>la lista in ordine inverso.</p></li>
 </ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numeri</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
-
-<span class="nb">print</span><span class="p">(</span> <span class="n">numeri</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span> <span class="n">numeri</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span> <span class="n">numeri</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span> <span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">numeri</span><span class="p">[::</span><span class="mi">2</span><span class="p">])</span> 
-<span class="nb">print</span><span class="p">(</span><span class="n">numeri</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> 
-<span class="nb">print</span><span class="p">(</span> <span class="n">numeri</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span> <span class="p">)</span>  <span class="c1"># None, perché reverse modifica direttamente la lista originale e non restituisce una nuova lista:</span>
-</pre></div>
-</div>
-</div>
-</div>
 </section>
 <section id="esercizio-5">
 <h3>Esercizio 5.<a class="headerlink" href="#esercizio-5" title="Link to this heading">#</a></h3>
 <p>Definisci un intero <code class="docutils literal notranslate"><span class="pre">n</span></code> (n&gt;10), poi calcola con un ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code> la la somma dei numeri interi da 1 a n (incluso). Stampa il risultato e aggiungi un controllo per stabilire se la somma è pari o dispari.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">=</span><span class="mi">5</span>
-<span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span>  <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-    <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="o">+</span><span class="n">i</span>
-    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span>
-<span class="k">if</span> <span class="n">n</span><span class="o">%</span><span class="k">2</span>==0:
-    <span class="nb">print</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;la somma da 1 a </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2"> è </span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="s2"> che è pari&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>    
-    <span class="nb">print</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;la somma da 1 a </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2"> è </span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="s2"> che è dispari&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
 </section>
 <section id="esercizio-6">
 <h3>Esercizio 6.<a class="headerlink" href="#esercizio-6" title="Link to this heading">#</a></h3>
 <p>Scrivi una funzione <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">media(a,</span> <span class="pre">b,</span> <span class="pre">c):</span></code> che restituisca la media di tre numeri. Richiamala con alcuni valori e stampa il risultato con due cifre decimali.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">media</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">):</span>
-    <span class="n">m</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span>
-    <span class="n">m</span> <span class="o">=</span> <span class="n">m</span><span class="o">/</span><span class="mi">3</span>
-    <span class="k">return</span> <span class="n">m</span>
-
-<span class="n">A</span><span class="o">=</span><span class="mi">2</span>
-<span class="n">B</span><span class="o">=</span><span class="mi">4</span>
-<span class="n">C</span><span class="o">=</span><span class="mi">3</span>
-<span class="n">M</span> <span class="o">=</span> <span class="n">media</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">M</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
 </section>
 <section id="esercizio-7">
 <h3>Esercizio 7.<a class="headerlink" href="#esercizio-7" title="Link to this heading">#</a></h3>
@@ -1690,22 +1643,6 @@ Stampa valore e tipo di ciascuna variabile.</p>
 <li><p>il maggiore dei due.
 Recupera i tre risultati mediante unpacking.</p></li>
 </ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">mia_funzione</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
-    <span class="n">s</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
-    <span class="n">p</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span>
-    <span class="n">m</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">m</span><span class="p">)</span>
-
-<span class="n">a</span><span class="o">=</span><span class="mi">2</span>
-<span class="n">b</span><span class="o">=</span><span class="mi">7</span>
-<span class="n">s</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">m</span> <span class="o">=</span> <span class="n">mia_funzione</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;somma=</span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="s2">, prodotto=</span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s2">, max=</span><span class="si">{</span><span class="n">m</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
 </section>
 <section id="esercizio-8">
 <h3>Esercizio 8.<a class="headerlink" href="#esercizio-8" title="Link to this heading">#</a></h3>
