@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Esercitazione 1: Ottimizzazione &#8212; Metodi Numerici per il calcolo - LAB</title>
+    <title>Homework 1: Ottimizzazione &#8212; Metodi Numerici per il calcolo - LAB</title>
   
   
   
@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -177,8 +177,12 @@
 <li class="toctree-l2"><a class="reference internal" href="3_matplotlib.html">Grafica con Matplotlib</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Esercitazione 1: Ottimizzazione</a></li>
-
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Homework 1: Ottimizzazione</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="4_hw1_1_caso2D.html">Esercizio 1) Caso con <span class="math notranslate nohighlight">\(f: \mathbb{R}^2 \to \mathbb{R}\)</span> convessa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_hw1_2_caso2D_NonConvex.html">Esercizio 2) Caso con <span class="math notranslate nohighlight">\(f: \mathbb{R}^2 \to \mathbb{R}\)</span> non convessa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_hw1_3_caso1D.html">Esercizio 3) Caso con <span class="math notranslate nohighlight">\(f: \mathbb{R} \to \mathbb{R}\)</span></a></li>
+</ul>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="5_hm2.html">Homework 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="6_hm3.html">Homework 3</a></li>
 <li class="toctree-l1"><a class="reference internal" href="7_hm4.html">Homework 4</a></li>
@@ -364,7 +368,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Esercitazione 1: Ottimizzazione</h1>
+    <h1>Homework 1: Ottimizzazione</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -374,17 +378,14 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Esercitazione 1: Ottimizzazione</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#recap">Recap</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testo-degli-esercizi">Testo degli esercizi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recap-dell-algoritmo-di-ottimizzazione">Recap dell’algoritmo di ottimizzazione</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#il-metodo-della-discesa-del-gradiente">Il metodo della discesa del gradiente</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#focus-il-criterio-di-arresto">Focus: il criterio di arresto</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#focus-il-passo-di-discesa-e-il-backtracking">Focus: il passo di discesa e il backtracking</a></li>
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -395,8 +396,8 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="esercitazione-1-ottimizzazione">
-<h1>Esercitazione 1: Ottimizzazione<a class="headerlink" href="#esercitazione-1-ottimizzazione" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="homework-1-ottimizzazione">
+<h1>Homework 1: Ottimizzazione<a class="headerlink" href="#homework-1-ottimizzazione" title="Link to this heading">#</a></h1>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Lo svolgimento di questa esercitazione è <strong>obbligatoria</strong> per sostenere l’esame l’orale, che consiste in una discussione di tutti gli homework (HWs 1-4). Le domande, infatti, riguarderanno il codice sviluppato, i risultati ottenuti e la teoria collegata alle esercitazioni.</p>
@@ -407,9 +408,17 @@
 <li><p>un unico report per HW, in formato PDF e contenente immagini di plot e screenshot dei soli risultati.</p></li>
 </ul>
 </div>
+<section id="testo-degli-esercizi">
+<h2>Testo degli esercizi<a class="headerlink" href="#testo-degli-esercizi" title="Link to this heading">#</a></h2>
+<p>Esercizio 1:
+<a class="reference external" href="https://morottie.github.io/Metodi-numerici-per-il-calcolo-2026/my_ipynb/4_hw1_1_caso2D.html">qui</a></p>
+<p>Esercizio 2:
+<a class="reference external" href="https://morottie.github.io/Metodi-numerici-per-il-calcolo-2026/my_ipynb/4_hw1_2_caso2D_NonConvex.html">qui</a></p>
+<p>Esercizio 3:
+<a class="reference external" href="https://morottie.github.io/Metodi-numerici-per-il-calcolo-2026/my_ipynb/4_hw1_3_caso1D.html">qui</a></p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="recap">
-<h1>Recap<a class="headerlink" href="#recap" title="Link to this heading">#</a></h1>
+<section id="recap-dell-algoritmo-di-ottimizzazione">
+<h2>Recap dell’algoritmo di ottimizzazione<a class="headerlink" href="#recap-dell-algoritmo-di-ottimizzazione" title="Link to this heading">#</a></h2>
 <p>Data una funzione <span class="math notranslate nohighlight">\( f : \mathbb{R}^n \to \mathbb{R}\)</span>, vogliamo risolvere il problema di minimo</p>
 <div class="math notranslate nohighlight">
 \[
@@ -424,6 +433,7 @@
 \]</div>
 <p>dove <span class="math notranslate nohighlight">\(p^{(k)}\)</span> è una direzione di discesa per <span class="math notranslate nohighlight">\(f\)</span>.</p>
 <p><img alt="" src="../_images/algo_GD_00.png" /></p>
+</section>
 <section id="il-metodo-della-discesa-del-gradiente">
 <h2>Il metodo della discesa del gradiente<a class="headerlink" href="#il-metodo-della-discesa-del-gradiente" title="Link to this heading">#</a></h2>
 <p>In questo algoritmo, si sceglie sempre la direzione di discesa come l’antigradiente, ossia</p>
@@ -681,17 +691,14 @@ f(\mathbf{x}^{(k)} ) + c_1\alpha_k \nabla f(\mathbf{x}^{(k)} )^T\mathbf{p}^{(k)}
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Esercitazione 1: Ottimizzazione</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#recap">Recap</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testo-degli-esercizi">Testo degli esercizi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recap-dell-algoritmo-di-ottimizzazione">Recap dell’algoritmo di ottimizzazione</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#il-metodo-della-discesa-del-gradiente">Il metodo della discesa del gradiente</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#focus-il-criterio-di-arresto">Focus: il criterio di arresto</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#focus-il-passo-di-discesa-e-il-backtracking">Focus: il passo di discesa e il backtracking</a></li>
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>
