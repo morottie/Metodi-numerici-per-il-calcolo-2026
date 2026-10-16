@@ -65,8 +65,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'my_ipynb/5_hm2_1_zeroSemplice';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Homework 3" href="6_hm3.html" />
-    <link rel="prev" title="Homework 2: risoluzione di equazioni non lineari" href="5_hm2_0_intro.html" />
+    <link rel="next" title="Esercizio 2) Caso con zeri multipli" href="5_hm2_2_zeriMultipli.html" />
+    <link rel="prev" title="Homework 2: Risoluzione di equazioni non lineari" href="5_hm2_0_intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -183,8 +183,10 @@
 <li class="toctree-l2"><a class="reference internal" href="4_hw1_3_caso1D.html">Esercizio 3) Caso con <span class="math notranslate nohighlight">\(f: \mathbb{R} \to \mathbb{R}\)</span></a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="5_hm2_0_intro.html">Homework 2: risoluzione di equazioni non lineari</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="5_hm2_0_intro.html">Homework 2: Risoluzione di equazioni non lineari</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Esercizio 1) Caso con zero semplice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_hm2_2_zeriMultipli.html">Esercizio 2) Caso con zeri multipli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_hm2_3_zeroPuntoFisso.html">Esercizio 3) Metodo del punto fisso</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="6_hm3.html">Homework 3</a></li>
@@ -675,9 +677,6 @@ f'(x) = \frac{4(x-2) - (4x-7)}{(x-2)^2} = \frac{-1}{(x-2)^2}
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/78f86cd767f3e390a82835234a16d5ff908e3d821318157df5b72ad51f0f0949.png" src="../_images/78f86cd767f3e390a82835234a16d5ff908e3d821318157df5b72ad51f0f0949.png" />
-</div>
 </div>
 </section>
 <section id="risoluzione-con-bisezione">
@@ -692,24 +691,11 @@ f'(x) = \frac{4(x-2) - (4x-7)}{(x-2)^2} = \frac{-1}{(x-2)^2}
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Raggiunto il criterio di arresto.
-Zero analitico: 1.75
-Zero approssimato: 1.7499999999997269
-Numero di iterazioni: 40
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">iterati_bisez</span><span class="p">))</span>
 <span class="n">iterati_bisez</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">iterati_bisez</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;list&#39;&gt;
 </pre></div>
 </div>
 </div>
@@ -731,58 +717,11 @@ Numero di iterazioni: 40
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/c887bfa6078b87c38910d2974b949b74056f34ae3847b04481ec8ca9d4152d43.png" src="../_images/c887bfa6078b87c38910d2974b949b74056f34ae3847b04481ec8ca9d4152d43.png" />
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_iter_bisez</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span> 
     <span class="nb">print</span><span class="p">(</span> <span class="sa">f</span><span class="s2">&quot;Al passo k=</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">, errore=</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">x_star</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">iterati_bisez</span><span class="p">[</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="si">:</span><span class="s2">.3e</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Al passo k=1, errore=3.000e-01
-Al passo k=2, errore=7.500e-02
-Al passo k=3, errore=3.750e-02
-Al passo k=4, errore=1.875e-02
-Al passo k=5, errore=9.375e-03
-Al passo k=6, errore=4.688e-03
-Al passo k=7, errore=2.344e-03
-Al passo k=8, errore=1.172e-03
-Al passo k=9, errore=5.859e-04
-Al passo k=10, errore=2.930e-04
-Al passo k=11, errore=1.465e-04
-Al passo k=12, errore=7.324e-05
-Al passo k=13, errore=3.662e-05
-Al passo k=14, errore=1.831e-05
-Al passo k=15, errore=9.155e-06
-Al passo k=16, errore=4.578e-06
-Al passo k=17, errore=2.289e-06
-Al passo k=18, errore=1.144e-06
-Al passo k=19, errore=5.722e-07
-Al passo k=20, errore=2.861e-07
-Al passo k=21, errore=1.431e-07
-Al passo k=22, errore=7.153e-08
-Al passo k=23, errore=3.576e-08
-Al passo k=24, errore=1.788e-08
-Al passo k=25, errore=8.941e-09
-Al passo k=26, errore=4.470e-09
-Al passo k=27, errore=2.235e-09
-Al passo k=28, errore=1.118e-09
-Al passo k=29, errore=5.588e-10
-Al passo k=30, errore=2.794e-10
-Al passo k=31, errore=1.397e-10
-Al passo k=32, errore=6.985e-11
-Al passo k=33, errore=3.492e-11
-Al passo k=34, errore=1.746e-11
-Al passo k=35, errore=8.731e-12
-Al passo k=36, errore=4.366e-12
-Al passo k=37, errore=2.183e-12
-Al passo k=38, errore=1.092e-12
-Al passo k=39, errore=5.456e-13
-Al passo k=40, errore=2.731e-13
 </pre></div>
 </div>
 </div>
@@ -801,9 +740,6 @@ Al passo k=40, errore=2.731e-13
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/6bb17cd2c3c2842caa2cd0736edaa46296840c475a10797b108e9f715ff03444.png" src="../_images/6bb17cd2c3c2842caa2cd0736edaa46296840c475a10797b108e9f715ff03444.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -961,15 +897,15 @@ Al passo k=40, errore=2.731e-13
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Homework 2: risoluzione di equazioni non lineari</p>
+        <p class="prev-next-title">Homework 2: Risoluzione di equazioni non lineari</p>
       </div>
     </a>
     <a class="right-next"
-       href="6_hm3.html"
+       href="5_hm2_2_zeriMultipli.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Homework 3</p>
+        <p class="prev-next-title">Esercizio 2) Caso con zeri multipli</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

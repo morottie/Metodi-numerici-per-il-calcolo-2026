@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Homework 2: risoluzione di equazioni non lineari &#8212; Metodi Numerici per il calcolo - LAB</title>
+    <title>Homework 2: Risoluzione di equazioni non lineari &#8212; Metodi Numerici per il calcolo - LAB</title>
   
   
   
@@ -183,7 +183,7 @@
 <li class="toctree-l2"><a class="reference internal" href="4_hw1_3_caso1D.html">Esercizio 3) Caso con <span class="math notranslate nohighlight">\(f: \mathbb{R} \to \mathbb{R}\)</span></a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Homework 2: risoluzione di equazioni non lineari</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Homework 2: Risoluzione di equazioni non lineari</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="5_hm2_1_zeroSemplice.html">Esercizio 1) Caso con zero semplice</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5_hm2_2_zeriMultipli.html">Esercizio 2) Caso con zeri multipli</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5_hm2_3_zeroPuntoFisso.html">Esercizio 3) Metodo del punto fisso</a></li>
@@ -373,7 +373,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Homework 2: risoluzione di equazioni non lineari</h1>
+    <h1>Homework 2: Risoluzione di equazioni non lineari</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -405,7 +405,7 @@
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="homework-2-risoluzione-di-equazioni-non-lineari">
-<h1>Homework 2: risoluzione di equazioni non lineari<a class="headerlink" href="#homework-2-risoluzione-di-equazioni-non-lineari" title="Link to this heading">#</a></h1>
+<h1>Homework 2: Risoluzione di equazioni non lineari<a class="headerlink" href="#homework-2-risoluzione-di-equazioni-non-lineari" title="Link to this heading">#</a></h1>
 <p>Data una funzione non lineare <span class="math notranslate nohighlight">\(f:\mathbb{R}\to\mathbb{R}\)</span>, vogliamo determinare le <strong>radici</strong> dell’equazione <span class="math notranslate nohighlight">\(f(x)=0\)</span>, dette anche <strong>zeri della funzione</strong>, cioè i valori <span class="math notranslate nohighlight">\(x^*\)</span> tali che</p>
 <div class="math notranslate nohighlight">
 \[
@@ -468,7 +468,7 @@ Poi:</p>
 </section>
 <section id="esercizio-3-metodo-del-punto-fisso">
 <h2>Esercizio 3) Metodo del punto fisso<a class="headerlink" href="#esercizio-3-metodo-del-punto-fisso" title="Link to this heading">#</a></h2>
-<p>Definire la funzione <span class="math notranslate nohighlight">\(f(x)=x e^x - 1\)</span> che ha soluzione in <span class="math notranslate nohighlight">\(x^* = 0.5671\)</span> circa.
+<p>Definire la funzione <span class="math notranslate nohighlight">\(f(x)=x e^x - 1\)</span> che ha soluzione in <span class="math notranslate nohighlight">\(x^* \approx 0.5671\)</span> circa.
 Considerare le funzioni ausiliarie:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(g_1(x) = e^{-x}\)</span></p></li>
@@ -482,8 +482,13 @@ Considerare le funzioni ausiliarie:</p>
 <li><p>usare l’algoritmo del punto fisso per ciascuna funzione ausiliaria con <span class="math notranslate nohighlight">\(x_0 = 0.5\)</span>;</p></li>
 <li><p>confrontare le soluzioni ottenute e il numero di iterazioni effettuate;</p></li>
 <li><p>definire le derivate delle tre funzioni ausiliarie e calcolarne il valore in <span class="math notranslate nohighlight">\(x^*\)</span>;</p></li>
-<li><p>confrontare gli errori <span class="math notranslate nohighlight">\(e_k = |x^* - x_k|\)</span> compiuti rispetto a <span class="math notranslate nohighlight">\(x^*\)</span> in ciascun caso: cosa se ne deduce?</p></li>
+<li><p>confrontare gli errori <span class="math notranslate nohighlight">\(e_k = |x^* - x_k|\)</span> compiuti rispetto a <span class="math notranslate nohighlight">\(x^*\)</span> in ciascun caso:  <em>cosa se ne deduce?</em></p></li>
+<li><p>stima l’ordine di convergenza <span class="math notranslate nohighlight">\(p\)</span> guardando l’andamento di</p></li>
 </ul>
+<div class="math notranslate nohighlight">
+\[
+p_k = \frac{ log(e_{k+1}/e_k) }{ log(e_{k}/e_{k-1}) }
+\]</div>
 </section>
 <section id="recap-1">
 <h2>RECAP 1<a class="headerlink" href="#recap-1" title="Link to this heading">#</a></h2>

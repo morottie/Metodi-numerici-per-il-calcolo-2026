@@ -183,7 +183,7 @@
 <li class="toctree-l2"><a class="reference internal" href="4_hw1_3_caso1D.html">Esercizio 3) Caso con <span class="math notranslate nohighlight">\(f: \mathbb{R} \to \mathbb{R}\)</span></a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="5_hm2_0_intro.html">Homework 2: risoluzione di equazioni non lineari</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="5_hm2_0_intro.html">Homework 2: Risoluzione di equazioni non lineari</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="5_hm2_1_zeroSemplice.html">Esercizio 1) Caso con zero semplice</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5_hm2_2_zeriMultipli.html">Esercizio 2) Caso con zeri multipli</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Esercizio 3) Metodo del punto fisso</a></li>
@@ -415,8 +415,13 @@ Considerare le funzioni ausiliarie:</p>
 <li><p>usare l’algoritmo del punto fisso per ciascuna funzione ausiliaria con <span class="math notranslate nohighlight">\(x_0 = 0.5\)</span>;</p></li>
 <li><p>confrontare le soluzioni ottenute e il numero di iterazioni effettuate;</p></li>
 <li><p>definire le derivate delle tre funzioni ausiliarie e calcolarne il valore in <span class="math notranslate nohighlight">\(x^*\)</span>;</p></li>
-<li><p>confrontare gli errori <span class="math notranslate nohighlight">\(e_k = |x^* - x_k|\)</span> compiuti rispetto a <span class="math notranslate nohighlight">\(x^*\)</span> in ciascun caso: cosa se ne deduce?</p></li>
+<li><p>confrontare gli errori <span class="math notranslate nohighlight">\(e_k = |x^* - x_k|\)</span> compiuti rispetto a <span class="math notranslate nohighlight">\(x^*\)</span> in ciascun caso: <em>cosa se ne deduce?</em></p></li>
+<li><p>stima l’ordine di convergenza <span class="math notranslate nohighlight">\(p\)</span> guardando l’andamento di</p></li>
 </ul>
+<div class="math notranslate nohighlight">
+\[
+p_k = \frac{ log(e_{k+1}/e_k) }{ log(e_{k}/e_{k-1}) }
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
@@ -672,6 +677,69 @@ k 	  errore 1  	 errore 2 	 errore 3
 </div>
 <div class="cell_output docutils container">
 <img alt="../_images/5fd1920acec718cfd40fff78353f768b98b151e2b7bbeba419a7312b18ed0113.png" src="../_images/5fd1920acec718cfd40fff78353f768b98b151e2b7bbeba419a7312b18ed0113.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n1</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span> 
+    <span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">errori1</span><span class="p">[</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">errori1</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;k=</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2"> </span><span class="se">\t</span><span class="s2"> p=</span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>k=0 	 p=-0.3889531084474259
+k=1 	 p=1.4725887772446447
+k=2 	 p=1.9063153822427552
+k=3 	 p=1.2869656479199216
+k=4 	 p=1.3006983777020045
+k=5 	 p=1.1955738323532528
+k=6 	 p=1.18117094956485
+k=7 	 p=1.1433261908048649
+k=8 	 p=1.132686996688784
+k=9 	 p=1.109798672395301
+k=10 	 p=1.1085459289090789
+k=11 	 p=1.0837607648916916
+k=12 	 p=1.099969886355534
+k=13 	 p=1.0553197594777215
+k=14 	 p=1.1136397733045653
+k=15 	 p=1.0087013381938739
+k=16 	 p=1.199253534350112
+k=17 	 p=0.9025999974523722
+k=18 	 p=1.158558942788087
+k=19 	 p=0.9007118043672386
+k=20 	 p=1.0479301683706466
+k=21 	 p=0.9715062815692165
+k=22 	 p=1.015573150471103
+k=23 	 p=0.9910138304750651
+k=24 	 p=1.005041201027681
+k=25 	 p=0.9971242453963415
+k=26 	 p=1.0016254083954004
+k=27 	 p=0.9990764092961649
+k=28 	 p=1.0005232384741085
+k=29 	 p=0.9997030667280371
+k=30 	 p=1.0001683449287742
+k=31 	 p=0.9999045054347294
+k=32 	 p=1.0000541530258917
+k=33 	 p=0.9999692855214919
+k=34 	 p=1.000017418881904
+k=35 	 p=0.9999901207960096
+k=36 	 p=1.000005602859208
+k=37 	 p=0.9999968223551677
+k=38 	 p=1.0000018021731183
+k=39 	 p=0.9999989779074879
+k=40 	 p=1.000000579672162
+k=41 	 p=0.9999996712426923
+k=42 	 p=1.0000001864522945
+k=43 	 p=0.9999998942548344
+k=44 	 p=1.000000059972596
+k=45 	 p=0.9999999659870838
+k=46 	 p=1.0000000192901335
+k=47 	 p=0.9999999890596928
+k=48 	 p=1.0000000062047483
+k=49 	 p=0.9999999964809384
+</pre></div>
+</div>
 </div>
 </div>
 </section>
